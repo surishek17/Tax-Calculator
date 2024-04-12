@@ -2,12 +2,18 @@
     justify-content: center;
     align-items: center;
 }
+
 .question-mark {
-    color: #b7c7d8; /*  color of the question mark icon */
-    border-radius: 50%; /* Make the question mark icon rounded */
-    background-color: #fff; /*  background color of the question mark icon */
-    padding: 3px; /* Adjust the padding to control the size of the icon */
+    color: #b7c7d8;
+    /*  color of the question mark icon */
+    border-radius: 50%;
+    /* Make the question mark icon rounded */
+    background-color: #fff;
+    /*  background color of the question mark icon */
+    padding: 3px;
+    /* Adjust the padding to control the size of the icon */
 }
+
 .tooltip-content {
     display: none;
     position: absolute;
@@ -16,14 +22,19 @@
     padding: 5px;
     border-radius: 5px;
     z-index: 1;
-    width: 150px; /*  width of the tooltip content */
-    font-size: 14px; /*  font size of the tooltip content */
+    width: 150px;
+    /*  width of the tooltip content */
+    font-size: 14px;
+    /*  font size of the tooltip content */
 }
 
-.question-mark:hover + .tooltip-content {
-    display: block; /* Show the tooltip content when the question mark icon is hovered over */
-    top: 40px; /* Adjust the top position to position the tooltip content below the question mark icon */
-    left: 230px; /* Align the tooltip content with the left edge of the question mark icon */
+.question-mark:hover+.tooltip-content {
+    display: block;
+    /* Show the tooltip content when the question mark icon is hovered over */
+    top: 40px;
+    /* Adjust the top position to position the tooltip content below the question mark icon */
+    left: 230px;
+    /* Align the tooltip content with the left edge of the question mark icon */
 }
 
 .tooltip-content2 {
@@ -34,14 +45,19 @@
     padding: 5px;
     border-radius: 5px;
     z-index: 1;
-    width: 150px; /*  width of the tooltip content */
-    font-size: 14px; /*  font size of the tooltip content */
+    width: 150px;
+    /*  width of the tooltip content */
+    font-size: 14px;
+    /*  font size of the tooltip content */
 }
 
-.question-mark:hover + .tooltip-content2 {
-    display: block; /* Show the tooltip content when the question mark icon is hovered over */
-    top: 120px; /* Adjust the top position to position the tooltip content below the question mark icon */
-    left: 175px; /* Align the tooltip content with the left edge of the question mark icon */
+.question-mark:hover+.tooltip-content2 {
+    display: block;
+    /* Show the tooltip content when the question mark icon is hovered over */
+    top: 120px;
+    /* Adjust the top position to position the tooltip content below the question mark icon */
+    left: 175px;
+    /* Align the tooltip content with the left edge of the question mark icon */
 }
 
 .tooltip-content3 {
@@ -52,21 +68,49 @@
     padding: 5px;
     border-radius: 5px;
     z-index: 1;
-    width: 150px; /*  width of the tooltip content */
-    font-size: 14px; /*  font size of the tooltip content */
+    width: 150px;
+    /*  width of the tooltip content */
+    font-size: 14px;
+    /*  font size of the tooltip content */
 }
 
-.question-mark:hover + .tooltip-content3 {
-    display: block; /* Show the tooltip content when the question mark icon is hovered over */
-    top: 240px; /* Adjust the top position to position the tooltip content below the question mark icon */
-    left: 275px; /* Align the tooltip content with the left edge of the question mark icon */
+.question-mark:hover+.tooltip-content3 {
+    display: block;
+    /* Show the tooltip content when the question mark icon is hovered over */
+    top: 240px;
+    /* Adjust the top position to position the tooltip content below the question mark icon */
+    left: 275px;
+    /* Align the tooltip content with the left edge of the question mark icon */
 }
 
-.custom-text-color{
+.custom-text-color {
     color: purple;
 }
 
-.btn{
+.btn {
     background-color: purple;
     border-color: purple;
+}
+
+
+.error-icon {
+    color: #dc3545;
+    /* Error icon color */
+    cursor: pointer;
+}
+
+.error-tooltip {
+    display: none;
+    position: absolute;
+    background-color: #dc3545;
+    /* Error tooltip background color */
+    color: #fff;
+    /* Error tooltip text color */
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.input-group:hover .error-tooltip {
+    display: block;
 }
