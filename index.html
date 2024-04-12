@@ -22,6 +22,8 @@
                     <div class="card-body">
                         <h1 class="card-title text-center custom-text-color">Tax Calculator</h1>
                         <form id="taxForm" class="mt-4">
+
+
                             <div class="form-group">
                                 <label for="income">Enter gross annual income
                                     <i class="fas fa-question-circle question-mark"></i>
@@ -29,9 +31,17 @@
                                     <span class="tooltip-content">Gross annual income is your total salary in a year
                                         before any deductions</span>
                                 </label>
-                                <input type="number" id="income" placeholder="Enter gross annual income" name="income"
-                                    class="form-control" required>
+                                <div class="input-group">
+                                    <input type="text" id="income" placeholder="Enter gross annual income" name="income"
+                                        class="form-control" required>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text error-icon" id="incomeErrorIcon">!</span>
+                                    </div>
+                                </div>
+                                <div class="error-tooltip" id="incomeErrorTooltip">Please enter numbers only</div>
                             </div>
+
+
                             <div class="form-group mt-3">
                                 <label for="extraincome">Enter extra income
                                     <i class="fas fa-question-circle question-mark"></i>
@@ -39,32 +49,49 @@
                                     <span class="tooltip-content2">Extra income is your additional income that earns
                                         outside of your regular salary</span>
                                 </label>
-
-                                <input type="number" id="extraincome"
-                                    placeholder="Enter extra income from other sources" name="extraincome"
-                                    class="form-control" required>
+                                <div class="input-group">
+                                    <input type="text" id="extraincome"
+                                        placeholder="Enter extra income from other sources" name="extraincome"
+                                        class="form-control" required>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text error-icon" id="extraincomeErrorIcon">!</span>
+                                    </div>
+                                </div>
+                                <div class="error-tooltip" id="extraincomeErrorTooltip">Please enter numbers only</div>
                             </div>
                             <div class="form-group mt-3">
                                 <label for="age">Enter age group</label>
                                 <select id="age" name="age" class="form-control" required>
                                     <option value="<40">less than 40</option>
-                                    <option value=">=40&<60">greater than equal to 40 and less than equal to 60</option>
+                                    <option value=">=40&<60">greater than equal to 40 and less than equal to 60
+                                    </option>
                                     <option value=">=60">greater than equal to 60</option>
                                 </select>
                             </div>
+
+
                             <div class="form-group mt-3">
                                 <label for="deductions">Enter total applicable deductions
                                     <i class="fas fa-question-circle question-mark"></i>
                                     <!-- tooltip content -->
                                     <span class="tooltip-content3">Total applicable deductions is your sum of all
-                                        deductions that can be subtracted from a gross income to arrive at their taxable
+                                        deductions that can be subtracted from a gross income to arrive at their
+                                        taxable
                                         income</span>
                                 </label>
-                                <input type="number" id="deductions" placeholder="Add total applicable deductions"
-                                    name="deductions" class="form-control" required>
+                                <div class="input-group">
+                                    <input type="text" id="deductions" placeholder="Add total applicable deductions"
+                                        name="deductions" class="form-control" required>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text error-icon" id="deductionsErrorIcon">!</span>
+                                    </div>
+                                </div>
+                                <div class="error-tooltip" id="deductionsErrorTooltip">Please enter numbers only</div>
                             </div>
+
                             <button type="submit" class="btn btn-primary col-12 mx-auto mt-3">Submit</button>
                         </form>
+
                         <div id="result" class="mt-4"></div>
                     </div>
                 </div>
