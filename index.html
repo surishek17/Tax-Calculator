@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <!-- Add bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Add fontawesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Add Favicon link -->
+    <link rel="icon" type="image/x-icon" href="./images/tax-icon.jpg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card mt-5">
+                    <div class="card-body">
+                        <h1 class="card-title text-center custom-text-color">Tax Calculator</h1>
+                        <form id="taxForm" class="mt-4">
+                            <div class="form-group">
+                                <label for="income">Enter gross annual income
+                                    <i class="fas fa-question-circle question-mark"></i>
+                                    <!-- tooltip content -->
+                                    <span class="tooltip-content">Gross annual income is your total salary in a year
+                                        before any deductions</span>
+                                </label>
+                                <input type="number" id="income" placeholder="Enter gross annual income" name="income"
+                                    class="form-control" required>
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="extraincome">Enter extra income
+                                    <i class="fas fa-question-circle question-mark"></i>
+                                    <!-- tooltip content -->
+                                    <span class="tooltip-content2">Extra income is your additional income that earns
+                                        outside of your regular salary</span>
+                                </label>
+
+                                <input type="number" id="extraincome"
+                                    placeholder="Enter extra income from other sources" name="extraincome"
+                                    class="form-control" required>
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="age">Enter age group</label>
+                                <select id="age" name="age" class="form-control" required>
+                                    <option value="<40">less than 40</option>
+                                    <option value=">=40&<60">greater than equal to 40 and less than equal to 60</option>
+                                    <option value=">=60">greater than equal to 60</option>
+                                </select>
+                            </div>
+                            <div class="form-group mt-3">
+                                <label for="deductions">Enter total applicable deductions
+                                    <i class="fas fa-question-circle question-mark"></i>
+                                    <!-- tooltip content -->
+                                    <span class="tooltip-content3">Total applicable deductions is your sum of all
+                                        deductions that can be subtracted from a gross income to arrive at their taxable
+                                        income</span>
+                                </label>
+                                <input type="number" id="deductions" placeholder="Add total applicable deductions"
+                                    name="deductions" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary col-12 mx-auto mt-3">Submit</button>
+                        </form>
+                        <div id="result" class="mt-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br /><br />
+        <hr />
+        <h4 class="text-center text-bg-warning"> &copy; Shekhar Suri 2024</h4>
+
+        <div id="modal" class="modal bd-example-modal-lg" tabindex="-1" aria-labelledby="myLargeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <span class="close">Your overall income will be</span>
+                    <div id="modalResult"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Jquery link -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="script.js"></script>
+</body>
+
+</html>
