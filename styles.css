@@ -95,6 +95,7 @@
 
 .error-icon {
     color: #dc3545;
+    display: none; /* Hide the error icons by default */
     /* Error icon color */
     cursor: pointer;
 }
